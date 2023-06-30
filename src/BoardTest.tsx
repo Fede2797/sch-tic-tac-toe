@@ -9,6 +9,7 @@ export const BoardTest = () => {
     const [isGameOver, setIsGameOver] = useState(false);
     const [isGlitching, setIsGlitching] = useState(false);
     const [board, setBoard] = useState(Array(9).fill(null));
+    // const [board, setBoard] = useState(Array(9).fill("G"));
     const [currentPlayer, setCurrentPlayer] = useState(X_PIECE);
 
     const  getRandomNumber = (a: number, b: number) => {
@@ -156,10 +157,15 @@ export const BoardTest = () => {
                 <div className="w-full max-w-[60vh] h-full max-h-[60vh] grid grid-cols-3 grid-rows-3 gap-[5px] bg-grayLines">
                     {
                         board.map( (cell, index) => (
-                            <div key={index} onClick={ () => playPiece(index) } className="w-full h-full bg-darkBlue">
+                            <div key={index} onClick={ () => playPiece(index) } className="relative w-full h-full bg-darkBlue">
                                 {cell === X_PIECE  && <img src="x-bold.svg"></img>}
                                 {cell === O_PIECE  && <img src="o-bold.svg"></img>}
-                                {cell === X_GLITCH && <img className="animate-spin" src="x-bold.svg"></img>}
+                                {cell === X_GLITCH && 
+                                    <figure className="relative">
+                                        <img className="animate-glitch" src="x-bold.svg"></img>
+                                        <img className="absolute top-0 left-0 animate-glitch2" src="x-bold.svg"></img>
+                                    </figure>
+                                }
                             </div>
                         ))
                     }

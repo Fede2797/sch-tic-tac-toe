@@ -11,21 +11,21 @@ export default {
       keyframes: {
         'glitch': {
           '0%, 100%': { 
-            transform: 'translate(10px)',
+            transform: 'translate(8px)',
             opacity: .3 
           },
           '50%': { 
-            transform: 'translate(-10px)',
+            transform: 'translate(-8px)',
             opacity: .9
           },
         },
         'glitch2': {
           '0%, 100%': { 
-            transform: 'translate(-20px)',
+            transform: 'translate(-15px)',
             opacity: .7
           },
           '50%': { 
-            transform: 'translate(20px)',
+            transform: 'translate(15px)',
             opacity: .1
           },
         }

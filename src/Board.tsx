@@ -156,14 +156,14 @@ export const Board = () => {
     return (
         <main className="flex flex-col items-center">
             {/* Winner sign */}
-            <div className="w-full h-16 mt-5 flex items-center justify-center text-center font-bold text-white text-[36px] md:text-[42px] lg:text-[54px] xl:text-[64px] xl:my-10">
-                {(winner === "X") && <h1>You win!</h1>}
-                {(winner === "O") && <h1>You lose :{"("}</h1>}
-                {(winner === "D") && <h1>Draw</h1>}
+            <div className="w-full h-16 mt-5 flex items-center justify-center text-center font-bold text-white text-[36px] md:text-[42px] lg:text-[54px]">
+                {(winner === "X") && <h1>You <span className="inline-block animate-glitch3">win!</span></h1>}
+                {(winner === "O") && <h1>You <span className="inline-block animate-glitch3">lose </span> :{"("}</h1>}
+                {(winner === "D") && <h1><span className="inline-block animate-glitch3">Draw</span></h1>}
             </div>
             {/* Tic Tac Toe Board */}
-            <div className="w-[55vw] h-[55vw] max-h-[55vh] mt-5 flex justify-center">
-                <div className="w-full max-w-[55vh] h-full max-h-[55vh] grid grid-cols-3 grid-rows-3 gap-[5px] bg-grayLines">
+            <div className="w-[50vw] h-[50vw] max-h-[50vh] mt-5 flex justify-center">
+                <div className="w-full max-w-[50vh] h-full max-h-[50vh] grid grid-cols-3 grid-rows-3 gap-[5px] bg-grayLines">
                     {
                         board.map( (cell, index) => (
                             <div key={index} onClick={ () => playPiece(index) } className="relative w-full h-full bg-darkBlue">

@@ -10,9 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "powerglitch": "^2.3.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-use": "^17.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
